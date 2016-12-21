@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>water</title>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body style="background-color: #0b0b29; font-size: 15px; color: white;">
+<p>Чем дольше вы принимаете душ, тем больше воды уходит на этот процесс. Давайте прикинем, сколько? Даже если ваш душ едва открыт, в минуту из него вытекает примерно 6 литров воды. А это 12 бутылочек воды! Немало! Сколько же бутылок воды тратите Вы за 1 минуту?</p>
+<p style="padding-top: 100px; display: inline-block;">Сколько минут вы проводите в душе?</p>
+
+<input style="padding-top: 5px; display: inline-block;">
+	<button style="padding-top: 5px; display: inline-block;">жми</button>
+
+<p id="ass"></p>
+
+<script>
+
+//	var time, bottle;
+//
+//	function gatherCalc () {
+//		time = $("input:text").serializeArray();//получение массива
+////		time = $("input:text").value();//получение массива
+//		bottle = time[0].value * 12;//умножение времени на колличество бутылок в минуту
+//
+//	}//вычисление
+//
+//	$("input:submit").bind ("click" ,
+//			function text() {
+//				gatherCalc();
+//				$("p#ass").text("За " + time[0].value + " минут вы тратите " + bottle + " бутылок(0.5) воды");
+//				return false;
+//			}
+//	);
+
+$(document).ready(function() { // проверка готовности
+	var min; // говорим, что есть переменная
+	$("button").click(function() { // производим клик
+		min = $("input").val(); // перезаписываем в пустое пространство
+//		$("p#ass").text(""); // очищаем <p>
+		$("p#ass").text("За " + min + " мин. потребили " + (min * 12) + " бутылок воды"); // записываем результат
+	});
+});
+
+
+//	$("#submit").click(function(){
+//		$("body").append('<p>'+ bottle +'</p>');
+//
+//	});
+
+
+
+
+</script>
+
+</body>
+</html>
